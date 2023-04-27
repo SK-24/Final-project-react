@@ -40,8 +40,8 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          <li class="nav__link click" onClick={toggleDarkMode}> 
-           <a href="#" class="
+          <li className="nav__list click" onClick={toggleDarkMode}> 
+           <a href="#" className="
             nav__link
           "><i class="fas fa-adjust" ></i></a>
           </li>
