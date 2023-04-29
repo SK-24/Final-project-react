@@ -14,8 +14,7 @@ const Nav = () => {
   }
 
   function toggleDarkMode() {
-    document.querySelector('body').classList.toggle("dark-theme")
-     
+    document.querySelector("body").classList.toggle("dark-theme");
   }
 
   return (
@@ -40,20 +39,24 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          <li className="nav__list click" onClick={toggleDarkMode}> 
-           <a href="#" className="
+          <li className="nav__list">
+            <Link to="/login" className="nav__link">
+              Login
+            </Link>
+          </li>
+          <li className="nav__list click" onClick={toggleDarkMode}>
+            <a
+              href="#"
+              className="
             nav__link
-          "><i class="fas fa-adjust" ></i></a>
+          "
+            >
+              <i class="fas fa-adjust"></i>
+            </a>
           </li>
           <button className="btn__menu" onClick={openMenu}>
             <FontAwesomeIcon icon="bars" />
           </button>
-          <li className="nav__icon">
-            <Link to="/cart" className="nav__link">
-              <FontAwesomeIcon icon="shopping-cart" />
-            </Link>
-            <span className="cart__length">2</span>
-          </li>
         </ul>
         <div className="menu__backdrop">
           <button className="btn__menu btn__menu--close" onClick={closeMenu}>

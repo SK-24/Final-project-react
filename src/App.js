@@ -8,6 +8,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import Home from "./Pages/Home";
 import Books from "./Pages/Books";
+import Login from "./components/Login";
 import { books } from "./data";
 import { auth } from "./firebase/init";
 import {
@@ -59,12 +60,9 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <button onClick={register}>Register</button>
-        <button onClick={login}>Login</button>
-        <button onClick={logout}>Logout</button>
-        {loading ? "loading..." : user.email}
         <Route path="/" exact component={Home} />
-        <Route path="/books" render={() => <Books books={books} />} />
+        <Route path="/books" exact component={Books} />
+        <Route path="/login" exact component={Login} />
 
         <Footer />
       </div>
