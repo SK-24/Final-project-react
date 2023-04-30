@@ -17,9 +17,10 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
-  const [user, setUser] = React.useState({});
+  const [user, setUser] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
@@ -29,32 +30,9 @@ function App() {
       if (user) setUser(user);
     });
   }, []);
-  function register() {
-    console.log("register");
-    createUserWithEmailAndPassword(auth, "email@email.com", "test123")
-      .then((user) => {
-        console.log(user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  
 
-  function login() {
-    signInWithEmailAndPassword(auth, "email@email.com", "test123")
-      .then((user) => {
-        console.log(user);
-        setUser(user);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }
-
-  function logout() {
-    signOut(auth);
-    setUser({});
-  }
+  
 
   return (
     <Router>
@@ -63,6 +41,9 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/books" exact component={Books} />
         <Route path="/login" exact component={Login} />
+        <Route path="/login" element={<Login setUser={setUser}></Login>} />
+        <Route path="/dashboard" element={<Dashboard user={user}></Dashboard>} />
+        <Route path="/dashboard" exact component={Dashboard} />
 
         <Footer />
       </div>
