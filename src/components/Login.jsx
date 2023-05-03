@@ -27,16 +27,16 @@ const Login = () => {
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
 
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
   const history = useHistory();
 
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     if (!email || !password) return;
-//     setUser({ email: email, password: password });
-//     history.push("/dashboard");
-//     console.log(email, password);
-//   };
+  //   const handleSubmit = async (e) => {
+  //     e.preventDefault();
+  //     if (!email || !password) return;
+  //     setUser({ email: email, password: password });
+  //     history.push("/dashboard");
+  //     console.log(email, password);
+  //   };
 
   async function updatePost() {
     const hardcodedId = "2amSOkWQx6YHf7ZLRcTm";
@@ -110,14 +110,12 @@ const Login = () => {
       .then((user) => {
         console.log(user);
         setUser(user);
-        history.push('/dashboard')
+        history.push("/dashboard");
         // <location.href="./books" />
       })
       .catch((error) => {
         console.log(error.message);
       });
-      
-    
   }
 
   function logout() {
@@ -133,31 +131,40 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <input
+    <div className="login__page">
+      <h1 className="login__title">Login</h1>
+      <div className="wrapper-wrap">
+      <input className="wrapper"
         type="email"
         placeholder="Username"
         value={email}
         onChange={handleEmailChange}
       />
-      <input
+      </div>
+      <div className="wrapper-wrap">
+      <input className="wrapper"
         type="password"
         placeholder="Password"
         value={password}
         onChange={handlePasswordChange}
       />
-      <button onClick={register}>Register</button>
-      <button onClick={login}>Login</button>
-      <button onClick={logout}>Logout2</button>
-      {loading ? "loading..." : user.email}
-      <button onClick={createPost}>Create Post</button>
+      </div>
+      <div className="login__wrapper">
+        <button className="login__btn" onClick={login}>
+          Login
+        </button>
+      </div>
+      {/* <button onClick={register}>Register</button> */}
+      {/* <button onClick={logout}>Logout2</button> */}
+      {/* {loading ? "loading..." : user.email} */}
+      {/* <button onClick={createPost}>Create Post</button>
       <button onClick={getAllPosts}>get all posts</button>
       <button onClick={getPostById}>get post ID</button>
       <button onClick={getPostByUid}>get post UiD</button>
       <button onClick={updatePost}>Update post</button>
-      <button onClick={deletepost}>Delete post</button>
+      <button onClick={deletepost}>Delete post</button> */}
     </div>
   );
-}
+};
 
 export default Login;

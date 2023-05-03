@@ -39,7 +39,7 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          <li className="nav__list">
+          <li className="nav__list nav__button">
             <Link to="/login" className="nav__link">
               Login
             </Link>
