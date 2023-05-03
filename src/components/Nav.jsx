@@ -36,7 +36,7 @@ const Nav = () => {
           </li>
           <li className="nav__list">
             <Link to="/books" className="nav__link">
-              Contact
+              Contact Us
             </Link>
           </li>
           <li className="nav__list nav__button">
@@ -65,12 +65,17 @@ const Nav = () => {
           <ul className="menu__links">
             <li className="menu__list">
               <a href="/" className="menu__links">
-                Home Page
+                Home
               </a>
             </li>
             <li className="menu__list">
               <a href="/books" className="menu__links">
                 Contact Us
+              </a>
+            </li>
+            <li className="menu__list">
+              <a href="/login" className="menu__links">
+                Log In
               </a>
             </li>
           </ul>

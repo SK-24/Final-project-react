@@ -18,6 +18,11 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import Dashboard from "./Pages/Dashboard";
+import { Calendar } from "@fullcalendar/core";
+import DemoApp from "./components/Calendar";
+import Modal from "react-modal";
+
+
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -44,7 +49,8 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser}></Login>} />
         <Route path="/dashboard" element={<Dashboard user={user}></Dashboard>} />
         <Route path="/dashboard" exact component={Dashboard} />
-
+        <Route path="/calendar" exact component={DemoApp} />
+        {/* <Calendar /> */}
         <Footer />
       </div>
     </Router>
