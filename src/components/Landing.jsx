@@ -11,7 +11,9 @@ const Landing = () => {
             <h1>Welcome to Dawat-e-islami</h1>
             <h2>
               {" "}
-              find ur dream books with <span className="purple">Library</span>
+              We are a globally renowned, peaceful, Islamic,
+              non-political organisation working to  <span className="purple">convey the message of the
+              Quran and Sunnah.</span>
             </h2>
             <a href="#features">
               <button className=" about__btn btn"> About Us</button>

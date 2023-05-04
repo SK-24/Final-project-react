@@ -48,7 +48,7 @@ const Nav = () => {
             <a
               href="#"
               className="
-            nav__link
+            nav__link--dark nav__link
           "
             >
               <i class="fas fa-adjust"></i>
@@ -64,17 +64,17 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <a href="/" className="menu__links">
+              <a href="/" className="menu__links nav__link">
                 Home
               </a>
             </li>
             <li className="menu__list">
-              <a href="/books" className="menu__links">
+              <a href="/books" className="menu__links nav__link">
                 Contact Us
               </a>
             </li>
             <li className="menu__list">
-              <a href="/login" className="menu__links">
+              <a href="/login" className="menu__links nav__link">
                 Log In
               </a>
             </li>

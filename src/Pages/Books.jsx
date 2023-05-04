@@ -7,7 +7,7 @@ const Books = () => {
     emailjs
       .sendForm(
         "service_3vn20t2",
-        "service_3vn20t2",
+        "template_3cvm6n8",
         event.target,
         "74w-fDrutuPUyhCxk"
       )
@@ -40,6 +40,7 @@ const Books = () => {
                   <label htmlFor="name">Name:</label>
                   <input
                     type="text"
+                    placeholder="Adam Smith"
                     className="form-control"
                     id="name"
                     name="name"
@@ -50,6 +51,7 @@ const Books = () => {
                   <label htmlFor="email">Email:</label>
                   <input
                     type="email"
+                    placeholder="email@gmail.com"
                     className="form-control"
                     id="email"
                     name="email"
@@ -60,6 +62,7 @@ const Books = () => {
                   <label htmlFor="subject">Subject:</label>
                   <input
                     type="text"
+                    placeholder="Topic?"
                     className="form-control"
                     id="subject"
                     name="subject"
