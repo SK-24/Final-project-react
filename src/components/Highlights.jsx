@@ -11,16 +11,16 @@ const Highlights = () => {
                 <div className="highlight__wrapper">
                     <Highlight 
                     icon={<FontAwesomeIcon icon="bolt" />} 
-                    title="Easy and Quick" 
-                    para="get access to tthe book u pourchased online" />
+                    title="Go the extra mile" 
+                    para="..." />
                     <Highlight 
                     icon={<FontAwesomeIcon icon="book-open" />} 
-                    title="10k Books" 
-                    para="library has ur fav books" />
+                    title="Teach and Support" 
+                    para="..." />
                     <Highlight 
                     icon={<FontAwesomeIcon icon="tags" />} 
-                    title="Affordable" 
-                    para="get urself cheap books" />
+                    title="Provide excellent customer service" 
+                    para="..." />
                 </div>
             </div>
         </div>

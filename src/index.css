@@ -596,6 +596,16 @@ Dashboard Page
   border-radius: 10vh;
   display: flex;
 }
+
+
+.container {
+  height: 40vh;
+}
+
+.container__p {
+  height: 80vh;
+}
+
 /* 
 **
 
@@ -626,6 +636,26 @@ Login Page
   display: flex;
   justify-content: center;
 
+}
+
+.boxes {
+  display: flex;
+}
+
+.leftbox {
+  float:left;
+  flex-direction: row;
+  
+}
+.middlebox{
+  float:left;
+  margin-right: 20px;
+  
+}
+.rightbox{
+  float:right;
+  margin-right: 20px;
+  
 }
 
 .about__btn--ctc {
