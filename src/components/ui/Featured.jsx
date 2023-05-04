@@ -1,30 +1,53 @@
-import React from 'react';
+import React from "react";
 
 const Featured = () => {
-    return(
-        <section id="features">
-            <div className="container">
-                <div className="row">
-                    <h2 className="section__title">
-                        About <span className='purple'>Us</span> 
-                    </h2>
-                    <div className="books">
-                        <div className="book">
-                            <a href="">
-                                <figure className='book__img--wrapper'>
-                                    <img src="https://covers.openlibrary.org/b/id/8091016-L.jpg" alt="" />
-                                </figure>
-                            </a>
-                            <div className="book__title">
-                                <a href="/" className='book__title--link'>Atomic Habits
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section id="features">
+      <div className="container__p">
+        <div className="row">
+          <h2 className="section__title">
+            About <span className="purple">Us</span>
+          </h2>
+          <div className="books">
+            <div className="book">
+              <a href="">
+                <figure className="book__img--wrapper"></figure>
+              </a>
+              <div className="boxes">
+                <h5 className="leftbox">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  impedit, incidunt placeat sint libero temporibus sit modi
+                  maxime quia tempore facilis illo voluptates a dolore
+                  consequatur perferendis laboriosam nobis dolor accusantium
+                  cupiditate voluptatum. Omnis minima accusamus odit, deserunt
+                  aspernatur fugit! Placeat rem sed ut, voluptate eligendi
+                  similique! Vitae, quis natus?
+                </h5>
+                <h5 className="middlebox">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  impedit, incidunt placeat sint libero temporibus sit modi
+                  maxime quia tempore facilis illo voluptates a dolore
+                  consequatur perferendis laboriosam nobis dolor accusantium
+                  cupiditate voluptatum. Omnis minima accusamus odit, deserunt
+                  aspernatur fugit! Placeat rem sed ut, voluptate eligendi
+                  similique! Vitae, quis natus?
+                </h5>
+                <h5 className="rightbox">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  impedit, incidunt placeat sint libero temporibus sit modi
+                  maxime quia tempore facilis illo voluptates a dolore
+                  consequatur perferendis laboriosam nobis dolor accusantium
+                  cupiditate voluptatum. Omnis minima accusamus odit, deserunt
+                  aspernatur fugit! Placeat rem sed ut, voluptate eligendi
+                  similique! Vitae, quis natus?
+                </h5>
+              </div>
             </div>
-        </section>
-    );
-}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Featured;
