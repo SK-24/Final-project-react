@@ -14,7 +14,7 @@ const Landing = () => {
               find ur dream books with <span className="purple">Library</span>
             </h2>
             <a href="#features">
-              <button className="btn"> About Us</button>
+              <button className=" about__btn btn"> About Us</button>
             </a>
           </div>
           <figure className="header__img--wrapper">

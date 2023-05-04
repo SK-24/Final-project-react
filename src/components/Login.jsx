@@ -115,6 +115,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error.message);
+        alert("Incorrect username or password. Please try again."); // display error message
       });
   }
 
