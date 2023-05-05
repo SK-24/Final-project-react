@@ -12,11 +12,11 @@
   min-height: 100vh;
 }
 
-.dark-theme {
+.dark-theme, .contact__body {
   background-color: #121212;
 }
 
-.dark-theme * {
+.dark-theme, .black * {
   color: rgb(16, 201, 99);
 }
 
@@ -60,6 +60,10 @@ li {
   list-style-type: none;
 }
 
+.h1-t {
+  color: royalblue;
+}
+
 h1 {
   font-size: 56px;
   color: #3ba000;
@@ -101,6 +105,9 @@ button:active {
 .purple {
   color: #3ba000;
 }
+.purple--d {
+  color: #135229;
+}
 
 .logo {
   width: 90px;
@@ -129,6 +136,9 @@ Nav{
 
 }
 
+.header__sub{
+  text-align: center;
+}
 
 .nav__link {
   text-decoration: none;

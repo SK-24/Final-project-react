@@ -21,6 +21,7 @@ import Dashboard from "./Pages/Dashboard";
 import { Calendar } from "@fullcalendar/core";
 import DemoApp from "./components/Calendar";
 import Modal from "react-modal";
+import RandomCalendar from './components/RandomCalendar';
 
 
 
@@ -50,7 +51,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard user={user}></Dashboard>} />
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/calendar" exact component={DemoApp} />
+        <Route path="/randomcalendar" exact component={RandomCalendar} />
         {/* <Calendar /> */}
+        {/* <RandomCalendar /> */}
         <Footer />
       </div>
     </Router>

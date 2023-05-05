@@ -7,7 +7,7 @@ const Highlights = () => {
         <section id="highlights" >
         <div className="container">
             <div className="row">
-                <h2 className="section__title">What we <span className='purple'>do?</span></h2>
+                <h2 className="section__title">What we <span className='purple--d'>do?</span></h2>
                 <div className="highlight__wrapper">
                     <Highlight 
                     icon={<FontAwesomeIcon icon="bolt" />} 

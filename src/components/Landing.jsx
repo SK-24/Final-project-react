@@ -8,15 +8,13 @@ const Landing = () => {
       <header>
         <div className="header__container">
           <div className="header__description">
-            <h1>Welcome to Dawat-e-islami</h1>
-            <h2>
-              {" "}
+            <h1>Calendar Web-Page for <span >Dawat-e-islami</span> </h1>
+            <h3 className="header__sub">
               We are a globally renowned, peaceful, Islamic,
               non-political organisation working to  <span className="purple">convey the message of the
               Quran and Sunnah.</span>
-            </h2>
+            </h3>
             <a href="#features">
-              <button className=" about__btn btn"> About Us</button>
             </a>
           </div>
           <figure className="header__img--wrapper">

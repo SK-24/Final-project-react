@@ -53,6 +53,9 @@ const Dashboard = () => {
         <a href="/calendar" className="dash__links btn">
           Generate Calendar
         </a>
+        <a href="/randomcalendar" className="dash__links btn">
+          Generate Calendar New
+        </a>
       </li>
       {/* <button onClick={DemoApp}>Generate Calendar</button> */}
     </div>
