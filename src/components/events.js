@@ -1,86 +1,63 @@
-const eventsData = [
+const events = [
     {
-      title: "Waking people up from Fajr",
-      start: "2023-05-01",
-      end: "2023-05-05",
-      color: "blue",
+      title: "Fajr",
+      description: "Waking the community for the dawn prayer",
+      completed: false, // added property
     },
-  
     {
-      title: "small education",
-      start: "2023-05-06",
-      end: "2023-05-07",
-      color: "red",
+      title: "Sermon",
+      description: "Participation in a short educational sermon after the dawn prayer",
+      completed: false, // added property
     },
-  
     {
-      title: "Religious Lesson",
-      start: "2023-05-10",
-      end: "2023-05-11",
-      color: "green",
+      title: "Lessons",
+      description: "Religious Lesson during the day. Either at home, work or in a place of worship",
+      completed: false, // added property
     },
-  
     {
-      title: "Teach/learn Quran",
-      start: "2023-05-13",
-      end: "2023-05-14",
-      color: "purple",
+      title: "Teach/Learn Quran",
+      description: "Teaching or learning Quran recitation. At least 4 days a week.",
+      completed: false, // added property
     },
-  
     {
       title: "Individual Efforts",
-      start: "2023-05-20",
-      end: "2023-05-25",
-      color: "black",
-    },
-  
-    {
-      title: "Madani channel",
-      start: "2023-05-25",
-      end: "2023-05-26",
-      color: "grey",
-    },
-    
-    {
-      title: "Gathering",
-      start: "2023-05-29",
-      end: "2023-05-30",
-      color: "yellow",
+      description: "Spending time, one-to-one with members of the community to encourage their support of the activities and goals of Dawat-e-Islami.",
+      completed: false, // added property
     },
     {
-      title: "local community",
-      start: "2023-05-10",
-      end: "2023-05-11",
-      color: "green",
+      title: "Watch Programme",
+      description: "Watching Madani Muzakrah programme on Madani channel every Saturday",
+      completed: false, // added property
     },
     {
-      title: "Weekly-booklet",
-      start: "2023-05-13",
-      end: "2023-05-19",
-      color: "pink",
+      title: "Weekly Gathering",
+      description: "Participation in a Weekly Gathering in a Mosque every Thursday evening",
+      completed: false, // added property
     },
-  
     {
-      title: "time within a mosque",
-      start: "2023-05-20",
-      end: "2023-05-25",
-      color: "orange",
+      title: "Visiting Community",
+      description: "Visiting the local community throughout the week and inviting people towards righteousness (good deeds).",
+      completed: false, // added property
     },
-  
     {
-      title: "living in a mosque",
-      start: "2023-05-27",
-      end: "2023-05-28",
-      color: "clear",
+      title: "Reading Booklet",
+      description: "Reading the Weekly-booklet which is printed by the publishing dept of Dawat-e-Islami.",
+      completed: false, // added property
     },
-    
     {
-      title: "Filling out the Pious Deeds app",
-      start: "2023-05-29",
-      end: "2023-05-30",
-      color: "blue",
+      title: "Spend Time",
+      description: "Spending time within a mosque between two separate congregational prayers.",
+      completed: false, // added property
     },
-    
+    {
+      title: "3-Day Stay",
+      description: "A monthly spiritual-retreat -spending at least 3-days every month, living in a mosque with the intention of gaining religious knowledge.",
+      completed: false, // added property
+    },
+    {
+      title: "App/Booklet",
+      description: "Filling out the Pious Deeds app/booklet everyday of the month and then submitting the completed document to the appointed supervisor.",
+      completed: false, // added property
+    },
   ];
-  
-  export default eventsData;
+  export default events;

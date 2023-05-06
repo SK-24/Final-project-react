@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from "emailjs-com";
 
-const Books = () => {
+const Contact = () => {
   function sendEmail(event) {
     event.preventDefault();
     emailjs
@@ -91,7 +91,7 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default Contact;
 
 // "service_3vn20t2",
 //         "service_3vn20t2",

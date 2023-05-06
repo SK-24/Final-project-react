@@ -1,7 +1,6 @@
 import React from "react";
 import Landing from "../components/Landing";
 import Highlights from "../components/Highlights";
-import Featured from "../components/ui/Featured";
 import Explore from "../components/Explore";
 
 const Home = () => {
@@ -9,7 +8,6 @@ const Home = () => {
     <>
       <Landing/>
       <Highlights />
-      <Featured />
       <Explore />
     </>
   );

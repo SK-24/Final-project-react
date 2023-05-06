@@ -7,9 +7,8 @@ import {
   Route,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Home from "./Pages/Home";
-import Books from "./Pages/Books";
+import Contact from "./Pages/Contact";
 import Login from "./components/Login";
-import { books } from "./data";
 import { auth } from "./firebase/init";
 import {
   createUserWithEmailAndPassword,
@@ -20,10 +19,7 @@ import {
 import Dashboard from "./Pages/Dashboard";
 import { Calendar } from "@fullcalendar/core";
 import DemoApp from "./components/Calendar";
-import Modal from "react-modal";
-import RandomCalendar from './components/RandomCalendar';
-
-
+import RandomCalendar from "./components/RandomCalendar";
 
 function App() {
   const [user, setUser] = React.useState(null);
@@ -45,7 +41,7 @@ function App() {
       <div className="App">
         <Nav />
         <Route path="/" exact component={Home} />
-        <Route path="/books" exact component={Books} />
+        <Route path="/contact" exact component={Contact} />
         <Route path="/login" exact component={Login} />
         <Route path="/login" element={<Login setUser={setUser}></Login>} />
         <Route path="/dashboard" element={<Dashboard user={user}></Dashboard>} />

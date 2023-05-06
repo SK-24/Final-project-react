@@ -1,31 +1,38 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import Highlight from "./ui/Highlight";
 
 const Highlights = () => {
-    return(
-        <section id="highlights" >
-        <div className="container">
-            <div className="row">
-                <h2 className="section__title">What we <span className='purple--d'>do?</span></h2>
-                <div className="highlight__wrapper">
-                    <Highlight 
-                    icon={<FontAwesomeIcon icon="bolt" />} 
-                    title="Go the extra mile" 
-                    para="..." />
-                    <Highlight 
-                    icon={<FontAwesomeIcon icon="book-open" />} 
-                    title="Teach and Support" 
-                    para="..." />
-                    <Highlight 
-                    icon={<FontAwesomeIcon icon="tags" />} 
-                    title="Provide excellent customer service" 
-                    para="..." />
-                </div>
-            </div>
+  return (
+    <section id="highlights">
+      <div className="container">
+        <div className="row">
+          <h2 className="section__title">
+            What the Calendar <span className="purple--d">offers?</span>
+          </h2>
+          <div className="highlight__wrapper">
+            <p className="highlight__para">
+              <div className="highlight__title">Efficient scheduling:</div>
+              Effortlessly schedule appointments and meetings with your
+              coleagues
+            </p>
+            <p className="highlight__para">
+            <div className="highlight__title">Improved time management:</div>
+              a clear perspective of your calendar
+              allows you to prioritise things and manage your time more
+              efficiently.
+            </p>
+            <p className="highlight__para">
+            <div className="highlight__title">Improved organisation:</div>
+              A calendar generator assists you by
+              organising your schedule and duties.
+            </p>
+            
+          </div>
         </div>
+      </div>
     </section>
-    )
-}
+  );
+};
 
 export default Highlights;

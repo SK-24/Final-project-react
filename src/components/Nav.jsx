@@ -30,12 +30,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav__list">
-            <a href="#features" className="nav__link ">
-              About Us
-            </a>
-          </li>
-          <li className="nav__list">
-            <Link to="/books" className="nav__link">
+            <Link to="/contact" className="nav__link">
               Contact Us
             </Link>
           </li>
@@ -69,7 +64,7 @@ const Nav = () => {
               </a>
             </li>
             <li className="menu__list">
-              <a href="/books" className="menu__links nav__link">
+              <a href="/contact" className="menu__links nav__link">
                 Contact Us
               </a>
             </li>
