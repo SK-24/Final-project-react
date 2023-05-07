@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { auth } from "../firebase/init";
 import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 //imports
 const Dashboard = () => {
   const [user, setUser] = React.useState({});
@@ -9,13 +10,29 @@ const Dashboard = () => {
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
   const history = useHistory();
-//   variables being used below
+  const [verify, setVerify] = useState(null);
+  //   variables being used below
+
+
+  useEffect(() => {
+    const authenticate = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setVerify(user);
+      } else {
+        setVerify(null);
+        history.push("/");
+      }
+    });
+    return () => {
+      authenticate();
+    };
+  }, []);
+  //logout function
   function logout() {
     signOut(auth);
     setUser({});
     history.push("/login");
   }
-  //logout function
 
   return (
     <div className="dash__page">
@@ -25,13 +42,7 @@ const Dashboard = () => {
           Sign Out
         </a>
         {/* signout link */}
-        <a
-          href="https://calendar.google.com/calendar/u/0?cid=MDU4MDU5MTQzYjFjNmNkYWM3ZmM5MjZiY2E1OTY5ZTdlMzc3NDJhMGExM2Y1YTgyNWU0OGIzYjhhZDBiMDkxNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-          className="dash__links btn"
-          onClick=""
-        >
-          Google Calendar
-        </a>
+
         <a href="/randomcalendar" className="dash__links btn">
           Generate Calendar New
         </a>

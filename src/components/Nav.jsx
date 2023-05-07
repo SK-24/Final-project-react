@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Dawateislami_logo.png";
 import { Link } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+
+import { auth } from "../firebase/init";
 //imports
 
 const Nav = () => {
+  const [verify, setVerify] = useState(null);
   function openMenu() {
     document.body.classList += "menu--open";
   }
@@ -17,6 +21,23 @@ const Nav = () => {
   function toggleDarkMode() {
     document.querySelector("body").classList.toggle("dark-theme");
   }
+
+  useEffect( () => {
+    const authenticate = onAuthStateChanged( auth, (user) => {
+      if (user) {
+        setVerify(user);
+      }
+      else {
+        setVerify(null);
+        
+      }
+    });
+    
+    return() => {
+      authenticate();
+    };
+
+  },[]);
 
   return (
     <nav>
@@ -35,11 +56,21 @@ const Nav = () => {
               Contact Us
             </Link>
           </li>
+          {
+            verify ? <li className="nav_list">
+            <Link to="/dashboard" className="nav_link">
+              Dashboard
+            </Link>
+          </li>
+          :
+          <>
           <li className="nav_list">
             <Link to="/login" className="nav_link">
               Login
             </Link>
           </li>
+          </>
+          }
           <li className="nav_list click" onClick={toggleDarkMode}>
             <a
               href="#"

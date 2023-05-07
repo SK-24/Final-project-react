@@ -4,6 +4,9 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import events from "./events";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
+import { auth } from "../firebase/init";
+import { useHistory } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 //imports
 
 const RandomCalendar = () => {
@@ -11,7 +14,27 @@ const RandomCalendar = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [newEventDate, setNewEventDate] = useState(null);
   const calendarRef = useRef(null);
+  const history = useHistory();
+  const [verify, setVerify] = useState(null);
+
 //   variables being used below
+
+  useEffect( () => {
+    const authenticate = onAuthStateChanged( auth, (user) => {
+      if (user) {
+        setVerify(user);
+      }
+      else {
+        setVerify(null);
+        history.push("/");
+      }
+    });
+    
+    return() => {
+      authenticate();
+    };
+
+  },[]);
 
   useEffect(() => {
     // Retrieve events from localStorage
