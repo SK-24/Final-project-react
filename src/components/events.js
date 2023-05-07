@@ -60,4 +60,6 @@ const events = [
       completed: false, // added property
     },
   ];
+//12 events
+
   export default events;

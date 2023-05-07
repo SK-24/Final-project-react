@@ -517,6 +517,7 @@ Contact Page
   justify-content: center;
   align-items: center;
   height: 60vh;
+  background-color: rgba(29, 23, 43, 0.13);
 }
 
 /* Contact form */
@@ -892,7 +893,7 @@ Login Page
   display: flex;
   background-color: rgba(115, 66, 214, 0.1);
   border: none;
-  width: 40%;
+  width: 25%;
   height: 50px;
   text-align: center;
   box-shadow: 0 0.655vh 1.75vh 0.71vh #9c9c9c;

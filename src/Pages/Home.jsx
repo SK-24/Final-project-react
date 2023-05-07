@@ -6,7 +6,7 @@ import Explore from "../components/Explore";
 const Home = () => {
   return (
     <>
-      <Landing/>
+      <Landing />
       <Highlights />
       <Explore />
     </>

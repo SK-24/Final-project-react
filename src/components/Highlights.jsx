@@ -8,7 +8,7 @@ const Highlights = () => {
       <div className="container">
         <div className="row">
           <h2 className="section__title">
-            What the Calendar <span className="purple--d">offers?</span>
+            What does the Calendar <span className="purple--d">offer?</span>
           </h2>
           <div className="highlight__wrapper">
             <p className="highlight__para">
@@ -18,7 +18,7 @@ const Highlights = () => {
             </p>
             <p className="highlight__para">
             <div className="highlight__title">Improved time management:</div>
-              a clear perspective of your calendar
+              A clear perspective of your calendar
               allows you to prioritise things and manage your time more
               efficiently.
             </p>
@@ -27,7 +27,6 @@ const Highlights = () => {
               A calendar generator assists you by
               organising your schedule and duties.
             </p>
-            
           </div>
         </div>
       </div>

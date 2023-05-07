@@ -1,26 +1,8 @@
 import React, { useState } from "react";
 import Login from "../components/Login";
 import { auth, db } from "../firebase/init";
-import {
-  collection,
-  addDoc,
-  getDocs,
-  getDoc,
-  doc,
-  query,
-  where,
-  updateDoc,
-  deleteDoc,
-} from "firebase/firestore";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
-// import { useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
-import DemoApp from "../components/Calendar";
 
 const Dashboard = () => {
   const [user, setUser] = React.useState({});
@@ -35,10 +17,9 @@ const Dashboard = () => {
     history.push("/login");
   }
 
-  //   <iframe src="" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   return (
     <div className="dash__page">
-      <h2 className="dash__title"> Accounts Page</h2>
+      <h2 className="dash__title"> Dashboard</h2>
       <li className="dash__list">
         <a href="/login" className="dash__links btn" onClick={logout}>
           Sign Out
@@ -50,14 +31,10 @@ const Dashboard = () => {
         >
           Google Calendar
         </a>
-        <a href="/calendar" className="dash__links btn">
-          Generate Calendar
-        </a>
         <a href="/randomcalendar" className="dash__links btn">
           Generate Calendar New
         </a>
       </li>
-      {/* <button onClick={DemoApp}>Generate Calendar</button> */}
     </div>
   );
 };

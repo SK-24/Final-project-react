@@ -17,8 +17,6 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import Dashboard from "./Pages/Dashboard";
-import { Calendar } from "@fullcalendar/core";
-import DemoApp from "./components/Calendar";
 import RandomCalendar from "./components/RandomCalendar";
 
 function App() {
@@ -32,9 +30,6 @@ function App() {
       if (user) setUser(user);
     });
   }, []);
-  
-
-  
 
   return (
     <Router>
@@ -44,9 +39,11 @@ function App() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/login" exact component={Login} />
         <Route path="/login" element={<Login setUser={setUser}></Login>} />
-        <Route path="/dashboard" element={<Dashboard user={user}></Dashboard>} />
+        <Route
+          path="/dashboard"
+          element={<Dashboard user={user}></Dashboard>}
+        />
         <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/calendar" exact component={DemoApp} />
         <Route path="/randomcalendar" exact component={RandomCalendar} />
         {/* <Calendar /> */}
         {/* <RandomCalendar /> */}

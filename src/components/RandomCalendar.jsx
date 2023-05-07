@@ -148,6 +148,7 @@ const RandomCalendar = () => {
   };
 
   return (
+    
     <div className="test">
       <div className="testing__buttons">
         <button className=" test__btn btn" onClick={handleGenerateEvents}>
@@ -159,7 +160,9 @@ const RandomCalendar = () => {
         <button className=" test__btn btn" onClick={handleSaveCalendar}>
           Save Calendar as Image
         </button>
+        
       </div>
+      
 
       {calendar}
       {modalOpen && (
