@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import Highlight from "./ui/Highlight";
-
+//imports
 const Highlights = () => {
   return (
     <section id="highlights">
@@ -35,3 +33,4 @@ const Highlights = () => {
 };
 
 export default Highlights;
+//allow me to use this file in other files^

@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../assets/Dawateislami_logo.png";
 import { Link } from "react-router-dom";
+//imports
 
 const Footer = () => {
   return (
@@ -23,7 +24,7 @@ const Footer = () => {
               Contact Us
             </Link>
           </div>
-          <div className="footer__copyright">Copyright &copy;</div>
+          <div className="footer__copyright"> &copy;2023 Dawat-e-islami</div>
         </div>
       </div>
     </footer>
@@ -31,3 +32,4 @@ const Footer = () => {
 };
 
 export default Footer;
+//allow me to use this file in other files^

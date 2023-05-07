@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+//imports
+
 const Explore = () => {
     return(
         <section id="explore">
@@ -17,3 +19,4 @@ const Explore = () => {
 }
 
 export default Explore;
+//allow me to use this file in other files^

@@ -11,17 +11,17 @@ import Contact from "./Pages/Contact";
 import Login from "./components/Login";
 import { auth } from "./firebase/init";
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
 import Dashboard from "./Pages/Dashboard";
 import RandomCalendar from "./components/RandomCalendar";
+//imports
 
 function App() {
   const [user, setUser] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
+//   variables being used below
 
   React.useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -45,8 +45,7 @@ function App() {
         />
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/randomcalendar" exact component={RandomCalendar} />
-        {/* <Calendar /> */}
-        {/* <RandomCalendar /> */}
+        {/* Routes to the pages i said. Prevents long loadings. */}
         <Footer />
       </div>
     </Router>
@@ -54,3 +53,4 @@ function App() {
 }
 
 export default App;
+//allow me to use this file in other files^

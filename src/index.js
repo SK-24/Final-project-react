@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faAdjust } from '@fortawesome/free-solid-svg-icons'
+//imports
 
-library.add(faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags )
+library.add(faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faAdjust )
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,8 +15,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

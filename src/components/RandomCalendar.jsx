@@ -4,12 +4,14 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import events from "./events";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
+//imports
 
 const RandomCalendar = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [newEventDate, setNewEventDate] = useState(null);
   const calendarRef = useRef(null);
+//   variables being used below
 
   useEffect(() => {
     // Retrieve events from localStorage
@@ -99,6 +101,7 @@ const RandomCalendar = () => {
       startDate.getMonth() + 1,
       0
     );
+
     events.forEach((event) => {
       const randomDate = getRandomDate(startDate, endDate);
       const newEvent = {
@@ -204,3 +207,4 @@ const RandomCalendar = () => {
 };
 
 export default RandomCalendar;
+//allow me to use this file in other files^

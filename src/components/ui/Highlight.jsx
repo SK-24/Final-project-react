@@ -1,6 +1,7 @@
 import React from "react";
+//imports
 
-const Highlight = ({ icon, title, para }) => {
+const Highlight = ({ title, para }) => {
   return (
     <div className="highlight">
       <h3 className="highlight__subtitle"> {title}</h3>
@@ -10,3 +11,4 @@ const Highlight = ({ icon, title, para }) => {
 };
 
 export default Highlight;
+//allow me to use this file in other files^

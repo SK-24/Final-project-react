@@ -6,6 +6,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+//imports
 
 const Login = () => {
   const [user, setUser] = React.useState({});
@@ -13,6 +14,7 @@ const Login = () => {
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
   const history = useHistory();
+  //   variables being used below
 
   React.useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -78,3 +80,4 @@ const Login = () => {
 };
 
 export default Login;
+//allow me to use this file in other files^

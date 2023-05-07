@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
+//imports
 
 const Contact = () => {
   function sendEmail(event) {
@@ -21,6 +22,7 @@ const Contact = () => {
       );
     event.target.reset();
   }
+  //code to allow user on contact to send emails to my email
 
   return (
     <div className="contact__body">
@@ -38,6 +40,7 @@ const Contact = () => {
               <form className="contact-form" onSubmit={sendEmail}>
                 <div className="form-group">
                   <label htmlFor="name">Name:</label>
+                  {/* name area */}
                   <input
                     type="text"
                     placeholder="Adam Smith"
@@ -49,9 +52,10 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="email">Email:</label>
+                  {/* email area */}
                   <input
                     type="email"
-                    placeholder="email@gmail.com"
+                    placeholder="youremail@gmail.com"
                     className="form-control"
                     id="email"
                     name="email"
@@ -60,6 +64,7 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="subject">Subject:</label>
+                  {/* subject area */}
                   <input
                     type="text"
                     placeholder="Topic?"
@@ -71,6 +76,7 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label htmlFor="message">Message:</label>
+                  {/* message for user to send area */}
                   <textarea
                     className="form-control"
                     id="message"
@@ -79,9 +85,10 @@ const Contact = () => {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="about__btn--ctc btn-primary">
+                <button type="submit" className="contact__btn--ctc btn-primary">
                   Send
                 </button>
+                {/* send button */}
               </form>
             </div>
           </div>
@@ -92,7 +99,4 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// "service_3vn20t2",
-//         "service_3vn20t2",
-//         "74w-fDrutuPUyhCxk"
+//allow me to use this file in other files^

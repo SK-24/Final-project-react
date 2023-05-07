@@ -2,11 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Dawateislami_logo.png";
 import { Link } from "react-router-dom";
+//imports
 
 const Nav = () => {
   function openMenu() {
     document.body.classList += "menu--open";
   }
+  //   variables being used below
 
   function closeMenu() {
     document.body.classList.remove("menu--open");
@@ -18,57 +20,54 @@ const Nav = () => {
 
   return (
     <nav>
-      <div className="nav__container">
+      <div className="nav_container">
         <Link to="/">
           <img src={LibraryLogo} alt="" className="logo" />
         </Link>
-        <ul className="nav__links">
-          <li className="nav__list">
-            <Link to="/" className="nav__link">
+        <ul className="nav_links">
+          <li className="nav_list">
+            <Link to="/" className="nav_link">
               Home
             </Link>
           </li>
-          <li className="nav__list">
-            <Link to="/contact" className="nav__link">
+          <li className="nav_list">
+            <Link to="/contact" className="nav_link">
               Contact Us
             </Link>
           </li>
-          <li className="nav__list">
-            <Link to="/login" className="nav__link">
+          <li className="nav_list">
+            <Link to="/login" className="nav_link">
               Login
             </Link>
           </li>
-          <li className="nav__list click" onClick={toggleDarkMode}>
+          <li className="nav_list click" onClick={toggleDarkMode}>
             <a
               href="#"
-              className="
-            nav__link--dark nav__link
-          "
-            >
-              <i class="fas fa-adjust"></i>
+              className="nav_link--dark nav_link"            >
+            <FontAwesomeIcon icon="adjust"> </FontAwesomeIcon>        
             </a>
           </li>
           <button className="btn__menu" onClick={openMenu}>
             <FontAwesomeIcon icon="bars" />
           </button>
         </ul>
-        <div className="menu__backdrop">
+        <div className="menu_backdrop">
           <button className="btn__menu btn__menu--close" onClick={closeMenu}>
             <FontAwesomeIcon icon="times" />
           </button>
-          <ul className="menu__links">
-            <li className="menu__list">
-              <a href="/" className="menu__links nav__link">
+          <ul className="menu_links">
+            <li className="menu_list">
+              <a href="/" className="menu_links nav_link">
                 Home
               </a>
             </li>
-            <li className="menu__list">
-              <a href="/contact" className="menu__links nav__link">
+            <li className="menu_list">
+              <a href="/contact" className="menu_links nav_link">
                 Contact Us
               </a>
             </li>
-            <li className="menu__list">
-              <a href="/login" className="menu__links nav__link">
+            <li className="menu_list">
+              <a href="/login" className="menu_links nav_link">
                 Log In
               </a>
             </li>
@@ -80,3 +79,4 @@ const Nav = () => {
 };
 
 export default Nav;
+//allow me to use this file in other files^

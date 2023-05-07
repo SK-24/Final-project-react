@@ -1,6 +1,5 @@
-import react from "react";
 import Background from "../assets/Background.png";
-import { Link } from "react-router-dom";
+//imports
 
 const Landing = () => {
   return (
@@ -27,3 +26,4 @@ const Landing = () => {
 };
 
 export default Landing;
+//allow me to use this file in other files^
