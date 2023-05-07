@@ -177,9 +177,6 @@ const RandomCalendar = () => {
         <button className=" test__btn btn" onClick={handleGenerateEvents}>
           Generate New Calendar
         </button>
-        <button className=" test__btn btn" onClick={handlePrintCalendar}>
-          Print Calendar
-        </button>
         <button className=" test__btn btn" onClick={handleSaveCalendar}>
           Save Calendar as Image
         </button>
