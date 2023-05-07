@@ -31,13 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-nav {
-  height: 80px;
-  display: flex;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
 p {
   line-height: 1.5;
 }
@@ -108,6 +101,14 @@ button:active {
   padding: 10px;
 }
 
+/* NavBar */
+nav {
+  height: 80px;
+  display: flex;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
 Nav {
   background-color: rgba(29, 23, 43, 0.13);
 }
@@ -120,10 +121,6 @@ Nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-}
-
-.header__sub {
-  text-align: center;
 }
 
 .nav_link {
@@ -242,11 +239,14 @@ Nav {
 }
 
 /* 
-Landing page
+Landing/Header page
 */
 
 #landing {
   background-color: rgba(29, 23, 43, 0.13);
+}
+.header__sub {
+  text-align: center;
 }
 
 header {
@@ -273,7 +273,7 @@ header {
   align-items: center;
   margin: 0 auto;
   max-width: 600px;
-  scale: 1.5;
+  scale: 2;
   max-height: 50vh;
   z-index: 50;
 }
@@ -373,7 +373,7 @@ Explore page
 */
 
 #explore {
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(116, 65, 213, 0.1);
 }
 
 /* 
@@ -827,6 +827,10 @@ Calendar Page
 
 /* SMALL PHONES, LARGE SMARTPHONES */
 @media (max-width: 550px) {
+  .header__img--wrapper {
+    margin: 0 auto;
+    transform: scale(0.8);
+  }
   .btn__menu {
     display: block;
   }
@@ -855,6 +859,28 @@ Calendar Page
   .dash__links {
     width: 40%;
     /* or adjust the width to your preference */
+  }
+  .header__img--wrapper {
+    margin: 0 auto;
+    transform: scale(0.6);
+  }
+  .container {
+    transform: scale(0.79);
+  }
+  .footer__link {
+    margin: 0 auto;
+    font-size: 19px;
+  }
+
+  .contact__btn--ctc {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header__img--wrapper {
+    margin: 0 auto;
+    transform: scale(0.4);
   }
 }
 /* Media queries */

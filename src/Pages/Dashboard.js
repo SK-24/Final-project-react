@@ -1,9 +1,10 @@
+//imports
 import React, { useState, useEffect } from "react";
 import { auth } from "../firebase/init";
 import { signOut } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
-//imports
+//   variables being used below
 const Dashboard = () => {
   const [user, setUser] = React.useState({});
   const [loading, setLoading] = React.useState(true);
@@ -11,8 +12,6 @@ const Dashboard = () => {
   const [password, updatePassword] = useState("");
   const history = useHistory();
   const [verify, setVerify] = useState(null);
-  //   variables being used below
-
 
   useEffect(() => {
     const authenticate = onAuthStateChanged(auth, (user) => {

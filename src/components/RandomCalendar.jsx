@@ -17,24 +17,22 @@ const RandomCalendar = () => {
   const history = useHistory();
   const [verify, setVerify] = useState(null);
 
-//   variables being used below
+  //   variables being used below
 
-  useEffect( () => {
-    const authenticate = onAuthStateChanged( auth, (user) => {
+  useEffect(() => {
+    const authenticate = onAuthStateChanged(auth, (user) => {
       if (user) {
         setVerify(user);
-      }
-      else {
+      } else {
         setVerify(null);
         history.push("/");
       }
     });
-    
-    return() => {
+
+    return () => {
       authenticate();
     };
-
-  },[]);
+  }, []);
 
   useEffect(() => {
     // Retrieve events from localStorage
@@ -174,7 +172,6 @@ const RandomCalendar = () => {
   };
 
   return (
-    
     <div className="test">
       <div className="testing__buttons">
         <button className=" test__btn btn" onClick={handleGenerateEvents}>
@@ -186,9 +183,7 @@ const RandomCalendar = () => {
         <button className=" test__btn btn" onClick={handleSaveCalendar}>
           Save Calendar as Image
         </button>
-        
       </div>
-      
 
       {calendar}
       {modalOpen && (
