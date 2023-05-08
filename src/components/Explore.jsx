@@ -14,7 +14,7 @@ const Explore = () => {
             We are available at all times and will respond as quickly as
             possible.
           </h3>
-          <Link to="/books">
+          <Link to="/contact">
             <button className="about__btn btn">
               We would be delighted to hear from you.
             </button>
